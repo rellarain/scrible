@@ -90,7 +90,7 @@ body {
     }
     
     .outlineOnly {
-        #outlinerDash {width: calc(100vw - 45px);}
+        #outlinerDash {width: calc(100vw - 55px);}
         #drafterDash {width: 20px; height: 20px;}
         #readerDash {width: 20px; height: 20px;}
     }
@@ -130,16 +130,20 @@ body {
                 height: 25px;
                 cursor: pointer;
             }
-            input {
+            select {
                 grid-area: input;
-                width: calc(100% - 12.5px);
+                width: calc(100% - 5px);
                 border-radius: 4px;
+                cursor: pointer;
+                font-weight: 700;
+                background-color: rgb(150, 150, 150);
             }
             section {
                 grid-area: content;
                 background-color: teal;
                 height: calc(100% - 5px);
                 margin-top: 5px;
+                
             }
             
         }

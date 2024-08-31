@@ -4,9 +4,15 @@ export default function Outliner() {return (
     <main id="outlinerDash">
         <div>
             <button></button>
-            <input>
-            
-            </input>
+            <select>
+                <option>Series</option>
+                <option>Starlight Trilogy</option>
+                <option>Sunlight Trilogy</option>
+                <option>Moonlight Trilogy</option>
+                <option>Earthlight Trilogy</option>
+                <option>1</option>
+                <option>2</option>
+            </select>
             <section>
 
             </section>
