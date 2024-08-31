@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import '../src/style/style.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+// Component Imports
+
+import Drafter from './components/draft';
+import Outliner from './components/outline';
+import Reader from './components/reader';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div className='outlineDraft'>
+    {/* outlineOnly outlineDraft outlineReader */}
+    <Outliner/>
+    <Drafter/>
+    <Reader/>
+  </div>
+
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
