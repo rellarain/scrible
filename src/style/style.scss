@@ -46,7 +46,18 @@ table {
 }
 
 
-
+$GHue: 120;
+$YGHue: 90;
+$YHue: 60;
+$YOHue: 50;
+$OHue: 40;
+$ROHue: 20;
+$RHue: 0;
+$RPHue: 320;
+$PHue: 280;
+$BPHue: 260;
+$BHue: 240;
+$BGHue: 170;
 
 
 
@@ -73,100 +84,67 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: rgb(73, 73, 73);
+    color: hsl(0, 0%, 100%);
     padding: 0;
     margin: 0;
     font-family: sans-serif;
     iframe {display: none;}
     body {display: none;}
-
-    main {
+    
+    // .interfaceOpen {
+    //     #dashboardContainer {}
+    //     #interfaceContainer {}
+    // }
+    // .interfaceClosed {
+    //     #dashboardContainer {}
+    //     #interfaceContainer {}
+    // }
+    
+    #dashboardContainer {
+        height: calc(100vh - 50px);
+        width: 100vw;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(66, 66, 66);
+        display: block;
         position: absolute;
-        transition: all 1s;
+        z-index: 0;
+    }
+
+    #interfaceContainer {
+        height: 50px;
+        // height: calc(100vh - 10px);
         overflow: hidden;
-        border-radius: 4px;
-        padding: 5px;
-        
-    }
-    
-    .outlineOnly {
-        #outlinerDash {width: calc(100vw - 55px);}
-        #drafterDash {width: 20px; height: 20px;}
-        #readerDash {width: 20px; height: 20px;}
-    }
-    .outlineDraft {
-        #outlinerDash {width: 490px;}
-        #drafterDash {width: calc(100vw - 525px); height: calc(100vh - 55px);}
-        #readerDash {width: 20px; height: 20px;}
-        
-    }
-    .outlineReader {
-        #outlinerDash {width: 490px;}
-        #drafterDash {width: 10px; height: 10px;}
-        #readerDash {width: calc(100vw - 525px); height: calc(100vh - 55px);}
-    }
-    
-    #outlinerDash {
-        display: grid;
-        height: calc(100vh - 20px);
-        background-color: rgb(29, 29, 29);
-        color: white;
-        top: 5px;
-        right: 5px;
-        transition: height 1s, width 1s;
-        
-        div {
+        width: 100vw;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        background-color: rgb(126, 126, 126);
+        transition: height 1s;
+        box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.767);
+        header {
+            position: absolute;
+            height: 50px;
+            width: 100vw;
             display: grid;
-            width: 490px;
-            grid-template-columns: auto 30px;
-            grid-template-rows: 30px auto;
-            grid-template-areas: "input button" "content content";
+            background-color: rgb(48, 5, 61);
+            box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.767);
+            grid-template-columns: auto 40px;
+            grid-template-rows: 40px 10px;
+            grid-template-areas: "scriblr button" "progress progress";
             button {
                 grid-area: button;
-                border: none;
-                border-radius: 4px;
-                width: 25px;
-                margin: 2.5px;
-                height: 25px;
+                margin: 5px;
+                height: 30px;
+                width: 30px;
+                border-radius: 5px;
                 cursor: pointer;
             }
-            select {
-                grid-area: input;
-                width: calc(100% - 5px);
-                border-radius: 4px;
-                cursor: pointer;
-                font-weight: 700;
-                background-color: rgb(150, 150, 150);
+            div {
+                grid-area: progress;
+                background-color: black;
             }
-            section {
-                grid-area: content;
-                background-color: teal;
-                height: calc(100% - 5px);
-                margin-top: 5px;
-                
-            }
-            
         }
-    }
-    #drafterDash {
-        display: block;
-        color: white;
-        background-color: rgb(109, 109, 109);
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        transition: height 1s, width 1s;
-        
-    }
-    #readerDash {
-        display: block;
-        color: white;
-        background-color: black;
-        position: absolute;
-        bottom: 5px;
-        left: 5px;
-        transition: height 1s, width 1s;
-        
     }
 }
 

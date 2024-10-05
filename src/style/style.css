@@ -54,7 +54,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: rgb(73, 73, 73);
+  color: hsl(0, 0%, 100%);
   padding: 0;
   margin: 0;
   font-family: sans-serif;
@@ -65,100 +65,47 @@ body iframe {
 body body {
   display: none;
 }
-body main {
+body #dashboardContainer {
+  height: calc(100vh - 50px);
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(66, 66, 66);
+  display: block;
   position: absolute;
-  transition: all 1s;
+  z-index: 0;
+}
+body #interfaceContainer {
+  height: 50px;
   overflow: hidden;
-  border-radius: 4px;
-  padding: 5px;
+  width: 100vw;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background-color: rgb(126, 126, 126);
+  transition: height 1s;
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.767);
 }
-body .outlineOnly #outlinerDash {
-  width: calc(100vw - 55px);
-}
-body .outlineOnly #drafterDash {
-  width: 20px;
-  height: 20px;
-}
-body .outlineOnly #readerDash {
-  width: 20px;
-  height: 20px;
-}
-body .outlineDraft #outlinerDash {
-  width: 490px;
-}
-body .outlineDraft #drafterDash {
-  width: calc(100vw - 525px);
-  height: calc(100vh - 55px);
-}
-body .outlineDraft #readerDash {
-  width: 20px;
-  height: 20px;
-}
-body .outlineReader #outlinerDash {
-  width: 490px;
-}
-body .outlineReader #drafterDash {
-  width: 10px;
-  height: 10px;
-}
-body .outlineReader #readerDash {
-  width: calc(100vw - 525px);
-  height: calc(100vh - 55px);
-}
-body #outlinerDash {
+body #interfaceContainer header {
+  position: absolute;
+  height: 50px;
+  width: 100vw;
   display: grid;
-  height: calc(100vh - 20px);
-  background-color: rgb(29, 29, 29);
-  color: white;
-  top: 5px;
-  right: 5px;
-  transition: height 1s, width 1s;
+  background-color: rgb(48, 5, 61);
+  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.767);
+  grid-template-columns: auto 40px;
+  grid-template-rows: 40px 10px;
+  grid-template-areas: "scriblr button" "progress progress";
 }
-body #outlinerDash div {
-  display: grid;
-  width: 490px;
-  grid-template-columns: auto 30px;
-  grid-template-rows: 30px auto;
-  grid-template-areas: "input button" "content content";
-}
-body #outlinerDash div button {
+body #interfaceContainer header button {
   grid-area: button;
-  border: none;
-  border-radius: 4px;
-  width: 25px;
-  margin: 2.5px;
-  height: 25px;
+  margin: 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
   cursor: pointer;
 }
-body #outlinerDash div select {
-  grid-area: input;
-  width: calc(100% - 5px);
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 700;
-  background-color: rgb(150, 150, 150);
-}
-body #outlinerDash div section {
-  grid-area: content;
-  background-color: teal;
-  height: calc(100% - 5px);
-  margin-top: 5px;
-}
-body #drafterDash {
-  display: block;
-  color: white;
-  background-color: rgb(109, 109, 109);
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  transition: height 1s, width 1s;
-}
-body #readerDash {
-  display: block;
-  color: white;
+body #interfaceContainer header div {
+  grid-area: progress;
   background-color: black;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
-  transition: height 1s, width 1s;
 }/*# sourceMappingURL=style.css.map */

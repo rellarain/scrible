@@ -4,16 +4,15 @@ import '../src/style/style.css';
 
 // Component Imports
 
-import Drafter from './components/draft';
-import Outliner from './components/outline';
-import Reader from './components/reader';
+import Interface from './components/interface';
+import Dashboard from './components/dashboard';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <div className='outlineDraft'>
-    {/* outlineOnly outlineDraft outlineReader */}
-    <Outliner/>
-    <Drafter/>
-    <Reader/>
+  <div id="screenContainer" className='interfaceOpen'>
+    {/* interfaceOpen interfaceClosed */}
+    <Interface/>
+    <Dashboard/>
   </div>
 
 );
+     
